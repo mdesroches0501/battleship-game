@@ -6,7 +6,7 @@ namespace DevMikesBattleship
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Board board = new Board(5, 5);
         }
     }
 }

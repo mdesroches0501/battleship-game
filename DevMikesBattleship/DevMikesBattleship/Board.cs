@@ -6,13 +6,12 @@ namespace DevMikesBattleship
 {
     class Board
     {
-        public Point[] points { get; set; }
-        private const int _rows = 10;
-        private const int _columns = 10;
-
-        public Board()
+        public readonly int Row;
+        public readonly int Column;
+        public Board(int row, int column)
         {
-
+            Row = row;
+            Column = column;
         }
     }
 }
