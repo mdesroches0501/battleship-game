@@ -16,19 +16,13 @@ namespace DevMikesBattleship
             isOnBoard = board.OnBoard(panel2);
             Console.WriteLine(isOnBoard);
 
-            Ship ship = new Ship("Single", 1, panel1);
-            bool IsPanelOccupied = panel1.IsOccupied(ship);
+            Ship ship = new Ship("Single", 1);
+            bool IsPanelOccupied = panel1.IsOccupied(ship, panel1);
             Console.WriteLine(IsPanelOccupied);
 
-            IsPanelOccupied = panel2.IsOccupied(ship);
+            ship.ShipLocation = panel1;
+            IsPanelOccupied = panel1.IsOccupied(ship, panel1);
             Console.WriteLine(IsPanelOccupied);
-
-            bool IsShipSunk = ship.IsSunk();
-            Console.WriteLine(IsShipSunk);
-
-            ship.Hits = 1;
-            IsShipSunk = ship.IsSunk();
-            Console.WriteLine(IsShipSunk);
         }
     }
 }

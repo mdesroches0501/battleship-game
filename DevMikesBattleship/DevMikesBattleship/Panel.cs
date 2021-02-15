@@ -8,6 +8,7 @@ namespace DevMikesBattleship
     {
         public readonly int X;
         public readonly int Y;
+        public bool Miss;
 
         public Panel(int x, int y)
         {
@@ -15,9 +16,9 @@ namespace DevMikesBattleship
             Y = y;
         }
 
-        public bool IsOccupied(Ship ship)
+        public bool IsOccupied(Ship ship, Panel panel)
         {
-            return X == ship.LocationX && Y == ship.LocationY;
+            return ship.ShipLocation == panel;
         }
     }
 }

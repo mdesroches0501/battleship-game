@@ -19,5 +19,13 @@ namespace DevMikesBattleship
             return panel.X >= 0 && panel.X < Width &&
                    panel.Y >= 0 && panel.Y < Height;
         }
+
+        public void ShotOnBoard(Panel panel, Ship ship)
+        {
+            if (panel.IsOccupied(ship, panel))
+                ship.Hits++;
+            else
+                panel.Miss = true;
+        }
     }
 }

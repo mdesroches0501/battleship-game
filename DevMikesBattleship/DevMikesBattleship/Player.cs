@@ -6,6 +6,8 @@ namespace DevMikesBattleship
 {
     class Player
     {
-        public string Name { get; set; }
+        public readonly string PlayerName;
+        public Board Board;
+        public Ship[] ships;
     }
 }

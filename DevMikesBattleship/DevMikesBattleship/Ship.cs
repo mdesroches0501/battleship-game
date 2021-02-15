@@ -8,18 +8,15 @@ namespace DevMikesBattleship
     {
         public readonly string Name;
         public readonly int Width;
-        public readonly int LocationX;
-        public readonly int LocationY;
-
         public int Hits;
 
-        public Ship(string name, int width, Panel panel)
+        public Ship(string name, int width)
         {
             Name = name;
             Width = width;
-            LocationX = panel.X;
-            LocationY = panel.Y;
         }
+
+        public Panel ShipLocation { get; set; }
         public bool IsSunk()
         {
             return Hits >= Width;
